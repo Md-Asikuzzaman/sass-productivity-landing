@@ -3,7 +3,7 @@
 import Image from 'next/image';
 import React from 'react';
 import Container from '../components/Container';
-import { logoTickerData } from '@/utils/logoTickerData';
+import { logoTickerData } from '@/utils/data';
 
 const LogoTicker = () => {
   return (

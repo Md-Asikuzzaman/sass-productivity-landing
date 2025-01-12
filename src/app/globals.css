@@ -7,8 +7,20 @@
     @apply bg-gradient-to-b from-black to-[#001E80] text-transparent bg-clip-text;
   }
 
+  .section-title {
+    @apply text-center text-3xl md:text-[54px] md:leading-[60px] font-bold tracking-tighter gradient-title;
+  }
+
+  .section-desc {
+    @apply text-center text-[22px] leading-[30px] tracking-tight text-[#010D3E];
+  }
+
+  .section-heading-wrapper {
+    @apply max-w-[540px] mx-auto;
+  }
+
   .btn {
-    @apply py-2 px-4 rounded-full font-medium tracking-tight inline-flex items-center;
+    @apply py-2 px-4 rounded-full font-medium tracking-tight inline-flex items-center justify-center;
   }
 
   .btn-primary {
