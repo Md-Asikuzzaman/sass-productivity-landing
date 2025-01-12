@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 const Header = () => {
   return (
-    <header className='sticky top-0'>
+    <header className='sticky top-0 backdrop-blur-md z-30'>
       <Banner />
       <div className='py-5'>
         <Container className='flex justify-between items-center'>
@@ -23,7 +23,7 @@ const Header = () => {
             height={30}
             width={30}
             alt={'Logo'}
-            className='md:hidden'
+            className='md:hidden cursor-pointer'
           />
           <nav className='hidden md:flex gap-6 text-black/60 items-center'>
             <Link href={'/'}>About</Link>
@@ -31,9 +31,7 @@ const Header = () => {
             <Link href={'/'}>Customers</Link>
             <Link href={'/'}>Updates</Link>
             <Link href={'/'}>Help</Link>
-            <button className='bg-black text-white py-2 px-4 rounded-full font-medium tracking-tight'>
-              Get for free
-            </button>
+            <button className='btn btn-primary'>Get for free</button>
           </nav>
         </Container>
       </div>
