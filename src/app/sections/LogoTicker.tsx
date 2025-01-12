@@ -1,3 +1,5 @@
+'use client';
+
 import Image from 'next/image';
 import React from 'react';
 import Container from '../components/Container';
@@ -10,7 +12,13 @@ const LogoTicker = () => {
         <div className='flex gap-14 items-center justify-center flex-none'>
           {logoTickerData.map(({ id, imgPath }) => (
             <div key={id}>
-              <Image src={imgPath} alt='logo' height={32} width={100} priority />
+              <Image
+                src={imgPath}
+                alt='logo'
+                height={32}
+                width={100}
+                priority
+              />
             </div>
           ))}
         </div>
