@@ -5,7 +5,6 @@ import clsx from 'clsx';
 import './globals.css';
 
 const dmSans = DM_Sans({
-  variable: '--font-geist-sans',
   subsets: ['latin'],
 });
 
