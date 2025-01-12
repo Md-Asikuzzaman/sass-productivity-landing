@@ -1,3 +1,22 @@
-export const LogoTicker = () => {
-  return null;
+import Image from 'next/image';
+import React from 'react';
+import Container from '../components/Container';
+import { logoTickerData } from '@/utils/logoTickerData';
+
+const LogoTicker = () => {
+  return (
+    <section className='py-8 md:py-12 bg-white'>
+      <Container className='flex justify-center overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]'>
+        <div className='flex gap-14 items-center justify-center flex-none'>
+          {logoTickerData.map(({ id, imgPath }) => (
+            <div key={id}>
+              <Image src={imgPath} alt='logo' height={32} width={100} />
+            </div>
+          ))}
+        </div>
+      </Container>
+    </section>
+  );
 };
+
+export default LogoTicker;
