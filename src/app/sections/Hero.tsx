@@ -4,7 +4,7 @@ import Image from 'next/image';
 
 const Hero = () => {
   return (
-    <section className='section-gradient pt-8 pb-20 overflow-hidden'>
+    <section className='section-gradient pt-8 pb-20 overflow-x-clip'>
       <Container className='md:flex items-center'>
         <div className='md:w-[480px]'>
           <p className='text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg'>
@@ -36,9 +36,9 @@ const Hero = () => {
             alt={'cogs'}
             width={0}
             height={0}
-            sizes='(max-width: 768px) 100vw, (max-width: 1200px) 57vw, 33vw'
+            sizes='(max-width: 768px) 100vw, (max-width: 1024px) 67vw, 580px'
             style={{ width: 'auto', height: 'auto' }}
-            className='md:absolute top-0 bottom-0 lg:right-0 my-auto md:max-w-none md:translate-x-10'
+            className='md:absolute top-0 bottom-0 lg:right-0 my-auto md:max-w-none md:translate-x-10 lg:translate-x-0'
           />
 
           <Image
@@ -46,14 +46,14 @@ const Hero = () => {
             alt={'cylinder'}
             width={210}
             height={210}
-            className='hidden md:block md:absolute -translate-x-36 -translate-y-5'
+            className='hidden md:block md:absolute md:-translate-x-36 lg:-translate-x-14 md:-translate-y-5'
           />
           <Image
             src={'/assets/noodle.png'}
             alt={'noodle'}
             width={210}
             height={210}
-            className='hidden lg:block md:absolute translate-x-[20px] translate-y-[510px] rotate-[30deg]'
+            className='hidden lg:block md:absolute translate-x-[580px] translate-y-[580px] rotate-[40deg]'
           />
         </div>
       </Container>

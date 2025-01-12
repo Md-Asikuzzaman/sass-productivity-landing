@@ -10,7 +10,7 @@ const LogoTicker = () => {
         <div className='flex gap-14 items-center justify-center flex-none'>
           {logoTickerData.map(({ id, imgPath }) => (
             <div key={id}>
-              <Image src={imgPath} alt='logo' height={32} width={100} />
+              <Image src={imgPath} alt='logo' height={32} width={100} priority />
             </div>
           ))}
         </div>
