@@ -55,7 +55,7 @@ const TierCard: NextPage<Props> = ({
       </div>
       <button
         className={clsx(
-          'btn btn-primary w-full mt-[30px]',
+          'btn btn-solid w-full mt-[30px]',
           inverse && 'bg-white text-black'
         )}
       >

@@ -58,7 +58,7 @@ const Header = () => {
             >
               Help
             </Link>
-            <button className='btn btn-primary'>Get for free</button>
+            <button className='btn btn-solid'>Get for free</button>
           </nav>
         </Container>
       </div>

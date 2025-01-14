@@ -23,11 +23,11 @@
     @apply py-2 px-4 rounded-full font-medium tracking-tight inline-flex items-center justify-center;
   }
 
-  .btn-primary {
+  .btn-solid {
     @apply bg-black text-white;
   }
 
-  .btn-text {
+  .btn-outlined {
     @apply text-black bg-transparent;
   }
 

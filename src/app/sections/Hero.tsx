@@ -3,15 +3,14 @@
 import React from 'react';
 import Container from '../components/Container';
 import Image from 'next/image';
+import { IoIosArrowRoundForward } from 'react-icons/io';
 
 const Hero = () => {
   return (
     <section className='section-gradient pt-8 pb-20 overflow-x-clip'>
       <Container className='md:flex items-center'>
         <div className='md:w-[480px]'>
-          <p className='tag'>
-            Version 5.0 is here
-          </p>
+          <p className='tag'>Version 5.0 is here</p>
           <h1 className='text-5xl md:text-7xl font-bold tracking-tighter mt-6 gradient-title'>
             Pathway to productivity
           </h1>
@@ -20,15 +19,10 @@ const Hero = () => {
             your progress, motivate your efforts, and celebrate your successes.
           </p>
           <div className='flex gap-1 items-center mt-8'>
-            <button className='btn btn-primary'>Get for free</button>
-            <button className='btn btn-text gap-1'>
+            <button className='btn btn-solid'>Get for free</button>
+            <button className='btn btn-outlined gap-1'>
               <span>Learn more</span>
-              <Image
-                src='/assets/arrow-right.svg'
-                height={18}
-                width={18}
-                alt='arrow-right'
-              />
+              <IoIosArrowRoundForward size={22} />
             </button>
           </div>
         </div>

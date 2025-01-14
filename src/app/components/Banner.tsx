@@ -2,6 +2,7 @@
 
 import Image from 'next/image';
 import React from 'react';
+import { IoIosArrowRoundForward } from 'react-icons/io';
 
 const Banner = () => {
   return (
@@ -11,13 +12,7 @@ const Banner = () => {
       </p>
       <div className='inline-flex gap-1 items-center'>
         <p>Get started for free</p>
-        <Image
-          className='bg-white rounded-full'
-          src='/assets/arrow-right.svg'
-          height={18}
-          width={18}
-          alt='arrow-right'
-        />
+        <IoIosArrowRoundForward size={22} />
       </div>
     </div>
   );
