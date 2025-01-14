@@ -1,13 +1,25 @@
 'use client';
 
-import React from 'react';
+import React, { useRef } from 'react';
 import Container from '../components/Container';
-import Image from 'next/image';
 import { IoIosArrowRoundForward } from 'react-icons/io';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Hero = () => {
+  const heroRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: heroRef,
+    offset: ['start end', 'end start'],
+  });
+
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+
   return (
-    <section className='section-gradient pt-8 pb-20 overflow-x-clip'>
+    <section
+      ref={heroRef}
+      className='section-gradient pt-8 pb-20 overflow-x-clip'
+    >
       <Container className='md:flex items-center'>
         <div className='md:w-[480px]'>
           <p className='tag'>Version 5.0 is here</p>
@@ -27,29 +39,40 @@ const Hero = () => {
           </div>
         </div>
         <div className='mt-20 md:mt-0 md:h-[648px] md:flex-1 relative'>
-          <Image
+          <motion.img
             src={'/images/ui/cog.png'}
             alt={'cogs'}
-            width={0}
-            height={0}
-            sizes='(max-width: 768px) 100vw, (max-width: 1024px) 67vw, 580px'
-            style={{ width: 'auto', height: 'auto' }}
-            className='md:absolute top-0 bottom-0 mx-auto lg:mx-0 lg:right-0 my-auto md:max-w-none md:translate-x-10 lg:translate-x-0'
+            // width={0} // for nextjs image component...
+            // height={0}
+            // sizes='(max-width: 768px) 100vw, (max-width: 1024px) 67vw, 580px'
+            // style={{ width: 'auto', height: 'auto' }}
+            className='md:absolute md:h-full md:max-w-none md:-left-6 lg:left-[100px]'
+            animate={{
+              translateY: [-30, 30],
+            }}
+            transition={{
+              repeat: Infinity,
+              repeatType: 'mirror',
+              duration: 3.5,
+              ease: 'easeInOut',
+            }}
           />
 
-          <Image
+          <motion.img
             src={'/images/ui/cylinder.png'}
             alt={'cylinder'}
             width={210}
             height={210}
-            className='hidden md:block md:absolute md:-translate-x-36 lg:-translate-x-14 md:-translate-y-5'
+            className='hidden md:block md:absolute -top-[40px] -left-[150px] lg:-left-[100px]'
+            style={{ translateY: translateY }}
           />
-          <Image
+          <motion.img
             src={'/images/ui/noodle.png'}
             alt={'noodle'}
             width={210}
             height={210}
-            className='hidden lg:block md:absolute translate-x-[580px] translate-y-[580px] rotate-[40deg]'
+            className='hidden lg:block absolute top-[590px] left-[600px]  rotate-[40deg]'
+            style={{ translateY: translateY, rotate: '40deg' }}
           />
         </div>
       </Container>
