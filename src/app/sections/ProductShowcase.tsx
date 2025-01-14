@@ -1,12 +1,24 @@
 'use client';
 
-import React from 'react';
+import React, { useRef } from 'react';
 import Container from '../components/Container';
 import Image from 'next/image';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const ProductShowcase = () => {
+  const productRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: productRef,
+    offset: ['start end', 'end start'],
+  });
+
+  const translateY = useTransform(scrollYProgress, [0, 1], [200, -200]);
   return (
-    <section className='bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip'>
+    <section
+      ref={productRef}
+      className='bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip'
+    >
       <Container>
         <div className='section-heading-wrapper'>
           <div className='flex justify-center'>
@@ -31,19 +43,21 @@ const ProductShowcase = () => {
             sizes='(max-width: 768px) 100vw, (max-width: 1024px) 100vw, 100vw'
             style={{ width: 'auto', height: 'auto' }}
           />
-          <Image
-            className='hidden md:block absolute top-0 right-0 -translate-y-32 translate-x-32'
+          <motion.img
+            className='hidden md:block absolute -top-[100px] -right-[130px]'
             src={'/images/ui/pyramid.png'}
             alt={'pyramid'}
             width={262}
             height={262}
+            style={{ translateY: translateY }}
           />
-          <Image
-            className='hidden md:block absolute bottom-0 left-0 -translate-y-32 -translate-x-36'
+          <motion.img
+            className='hidden md:block absolute -left-[160px] lg:-left-[120px] bottom-[100px] lg:bottom-[200px]'
             src={'/images/ui/tube.png'}
             alt={'tube'}
             width={262}
             height={262}
+            style={{ translateY: translateY }}
           />
         </div>
       </Container>
