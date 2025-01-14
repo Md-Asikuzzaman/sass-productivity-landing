@@ -7,7 +7,7 @@ import TierCard from '../components/TierCard';
 
 const Pricing = () => {
   return (
-    <section className='py-24'>
+    <section className='py-24 bg-white'>
       <Container>
         <div className='section-heading-wrapper'>
           <h2 className='section-title'>Pricing</h2>

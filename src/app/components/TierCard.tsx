@@ -18,10 +18,7 @@ const TierCard: NextPage<Props> = ({
 }) => {
   return (
     <div
-      className={clsx(
-        'p-10 rounded-3xl shadow-[0_7px_14px_#EAEAEA] border border-[#F1F1F1] max-w-xs w-full',
-        inverse && 'bg-black border-black text-white'
-      )}
+      className={clsx('card', inverse && 'bg-black border-black text-white')}
     >
       <div className='flex justify-between'>
         <h3

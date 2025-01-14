@@ -34,6 +34,10 @@
   .tag {
     @apply text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-lg;
   }
+
+  .card {
+    @apply p-10 rounded-3xl shadow-[0_7px_14px_#EAEAEA] border border-[#222222]/10 max-w-xs w-full;
+  }
 }
 
 .section-gradient {

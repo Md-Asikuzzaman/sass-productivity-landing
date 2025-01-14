@@ -27,12 +27,37 @@ const Header = () => {
             alt={'Logo'}
             className='md:hidden cursor-pointer'
           />
-          <nav className='hidden md:flex gap-6 text-black/60 items-center'>
-            <Link href={'/'}>About</Link>
-            <Link href={'/'}>Features</Link>
-            <Link href={'/'}>Customers</Link>
-            <Link href={'/'}>Updates</Link>
-            <Link href={'/'}>Help</Link>
+          <nav className='hidden md:flex gap-6 items-center'>
+            <Link
+              href={'/'}
+              className='text-black/60 hover:text-black transition-colors'
+            >
+              About
+            </Link>
+            <Link
+              href={'/'}
+              className='text-black/60 hover:text-black transition-colors'
+            >
+              Features
+            </Link>
+            <Link
+              href={'/'}
+              className='text-black/60 hover:text-black transition-colors'
+            >
+              Customers
+            </Link>
+            <Link
+              href={'/'}
+              className='text-black/60 hover:text-black transition-colors'
+            >
+              Updates
+            </Link>
+            <Link
+              href={'/'}
+              className='text-black/60 hover:text-black transition-colors'
+            >
+              Help
+            </Link>
             <button className='btn btn-primary'>Get for free</button>
           </nav>
         </Container>
