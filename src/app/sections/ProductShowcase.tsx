@@ -24,7 +24,7 @@ const ProductShowcase = () => {
         <div className='relative'>
           <Image
             className='mt-10'
-            src={'/assets/product-image.png'}
+            src={'/images/logo/product-image.png'}
             alt={'product-image'}
             width={0}
             height={0}
@@ -33,14 +33,14 @@ const ProductShowcase = () => {
           />
           <Image
             className='hidden md:block absolute top-0 right-0 -translate-y-32 translate-x-32'
-            src={'/assets/pyramid.png'}
+            src={'/images/ui/pyramid.png'}
             alt={'pyramid'}
             width={262}
             height={262}
           />
           <Image
             className='hidden md:block absolute bottom-0 left-0 -translate-y-32 -translate-x-36'
-            src={'/assets/tube.png'}
+            src={'/images/ui/tube.png'}
             alt={'tube'}
             width={262}
             height={262}

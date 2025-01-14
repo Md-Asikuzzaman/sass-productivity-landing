@@ -2,7 +2,6 @@
 
 import { pricingTiers } from '@/utils/data';
 import Container from '../components/Container';
-import Image from 'next/image';
 import TierCard from '../components/TierCard';
 
 const Pricing = () => {

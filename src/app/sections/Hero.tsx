@@ -28,7 +28,7 @@ const Hero = () => {
         </div>
         <div className='mt-20 md:mt-0 md:h-[648px] md:flex-1 relative'>
           <Image
-            src={'/assets/cog.png'}
+            src={'/images/ui/cog.png'}
             alt={'cogs'}
             width={0}
             height={0}
@@ -38,14 +38,14 @@ const Hero = () => {
           />
 
           <Image
-            src={'/assets/cylinder.png'}
+            src={'/images/ui/cylinder.png'}
             alt={'cylinder'}
             width={210}
             height={210}
             className='hidden md:block md:absolute md:-translate-x-36 lg:-translate-x-14 md:-translate-y-5'
           />
           <Image
-            src={'/assets/noodle.png'}
+            src={'/images/ui/noodle.png'}
             alt={'noodle'}
             width={210}
             height={210}

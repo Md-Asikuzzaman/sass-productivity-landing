@@ -1,6 +1,7 @@
 import clsx from 'clsx';
 import { NextPage } from 'next';
 import Image from 'next/image';
+import { IoMdCheckmark } from 'react-icons/io';
 
 interface Props {
   tier: {
@@ -64,13 +65,7 @@ const TierCard: NextPage<Props> = ({
       <ul className='flex flex-col gap-5 mt-8'>
         {features.map((feature, i) => (
           <li key={i} className='flex items-center text-sm gap-4'>
-            <Image
-              className={inverse ? 'bg-white/60 rounded-full' : ''}
-              src={'/assets/check.svg'}
-              alt={'check'}
-              height={24}
-              width={24}
-            />
+            <IoMdCheckmark size={20} />
             <span>{feature}</span>
           </li>
         ))}

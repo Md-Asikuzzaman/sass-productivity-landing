@@ -17,14 +17,14 @@ const CallToAction = () => {
 
           {/* UI graphics */}
           <Image
-            src={'/assets/star.png'}
+            src={'/images/ui/star.png'}
             alt={'star'}
             height={350}
             width={350}
             className='hidden md:block absolute -left-[350px] -top-[140px]'
           />
           <Image
-            src={'/assets/spring.png'}
+            src={'/images/ui/spring.png'}
             alt={'star'}
             height={350}
             width={350}

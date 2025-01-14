@@ -14,14 +14,14 @@ const Header = () => {
         <Container className='flex justify-between items-center'>
           <Link href={'/'}>
             <Image
-              src={'/assets/logo.png'}
+              src={'/images/logo/logo.png'}
               height={40}
               width={40}
               alt={'Logo'}
             />
           </Link>
           <Image
-            src={'/assets/menu.svg'}
+            src={'/images/logo/menu.svg'}
             height={30}
             width={30}
             alt={'Logo'}
