@@ -75,7 +75,7 @@ const Footer = () => {
         </div>
 
         <p className='mt-6'>
-          &copy; {new Date().getFullYear()} Your Company, Inc. All Rights
+          &copy; {new Date().getFullYear()} [Your Company], Inc. All Rights
           Reserved.
         </p>
       </Container>
