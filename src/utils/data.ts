@@ -14,6 +14,12 @@ export const logoTickers = [
   {
     imgPath: '/images/logo/logo-pulse.png',
   },
+  {
+    imgPath: '/images/logo/logo-quantum.png',
+  },
+  {
+    imgPath: '/images/logo/logo-echo.png',
+  },
 ];
 
 export const pricingTiers = [
