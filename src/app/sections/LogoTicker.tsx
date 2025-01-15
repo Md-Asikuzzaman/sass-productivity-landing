@@ -1,10 +1,8 @@
 'use client';
 
-import Image from 'next/image';
 import React from 'react';
 import Container from '../components/Container';
 import { logoTickers } from '@/utils/data';
-import { motion } from 'framer-motion';
 import Slider from './Slider';
 
 const LogoTicker = () => {

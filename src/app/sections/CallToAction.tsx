@@ -1,10 +1,10 @@
 'use client';
 
-import Image from 'next/image';
 import Container from '../components/Container';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import { useRef } from 'react';
+import Button from '../components/Button';
 
 const CallToAction = () => {
   const sectionRef = useRef(null);
@@ -48,11 +48,10 @@ const CallToAction = () => {
           />
         </div>
         <div className='flex justify-center mt-10 gap-2'>
-          <button className='btn btn-solid'>Get for free</button>
-          <button className='btn btn-outlined gap-1'>
-            <span>Learn more</span>
-            <IoIosArrowRoundForward size={22} />
-          </button>
+          <Button type='btn-solid'>Get for free</Button>
+          <Button type='btn-outlined' Icon={IoIosArrowRoundForward}>
+            Learn more
+          </Button>
         </div>
       </Container>
     </section>

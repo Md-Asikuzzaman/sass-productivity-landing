@@ -5,7 +5,6 @@ import Hero from './sections/Hero';
 import LogoTicker from './sections/LogoTicker';
 import Pricing from './sections/Pricing';
 import ProductShowcase from './sections/ProductShowcase';
-import Slider from './sections/Slider';
 import Testimonials from './sections/Testimonials';
 
 export default function Home() {
@@ -14,7 +13,6 @@ export default function Home() {
       <Header />
       <Hero />
       <LogoTicker />
-      {/* <Slider /> */}
       <ProductShowcase />
       <Pricing />
       <Testimonials />
