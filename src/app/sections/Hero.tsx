@@ -6,10 +6,10 @@ import { IoIosArrowRoundForward } from 'react-icons/io';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Hero = () => {
-  const heroRef = useRef(null);
+  const sectionRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
-    target: heroRef,
+    target: sectionRef,
     offset: ['start end', 'end start'],
   });
 
@@ -17,7 +17,7 @@ const Hero = () => {
 
   return (
     <section
-      ref={heroRef}
+      ref={sectionRef}
       className='section-gradient pt-8 pb-20 overflow-x-clip'
     >
       <Container className='md:flex items-center'>
@@ -38,6 +38,8 @@ const Hero = () => {
             </button>
           </div>
         </div>
+
+        {/* UI graphics */}
         <div className='mt-20 md:mt-0 md:h-[648px] md:flex-1 relative'>
           <motion.img
             src={'/images/ui/cog.png'}
@@ -57,7 +59,6 @@ const Hero = () => {
               ease: 'easeInOut',
             }}
           />
-
           <motion.img
             src={'/images/ui/cylinder.png'}
             alt={'cylinder'}

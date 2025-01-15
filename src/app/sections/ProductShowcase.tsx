@@ -6,17 +6,17 @@ import Image from 'next/image';
 import { motion, useScroll, useTransform } from 'framer-motion';
 
 const ProductShowcase = () => {
-  const productRef = useRef(null);
+  const sectionRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
-    target: productRef,
+    target: sectionRef,
     offset: ['start end', 'end start'],
   });
 
   const translateY = useTransform(scrollYProgress, [0, 1], [200, -200]);
   return (
     <section
-      ref={productRef}
+      ref={sectionRef}
       className='bg-gradient-to-b from-[#FFFFFF] to-[#D2DCFF] py-24 overflow-x-clip'
     >
       <Container>
@@ -33,6 +33,7 @@ const ProductShowcase = () => {
           </p>
         </div>
 
+        {/* UI graphics */}
         <div className='relative'>
           <Image
             className='mt-10'

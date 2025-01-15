@@ -3,10 +3,24 @@
 import Image from 'next/image';
 import Container from '../components/Container';
 import { IoIosArrowRoundForward } from 'react-icons/io';
+import { motion, useScroll, useTransform } from 'framer-motion';
+import { useRef } from 'react';
 
 const CallToAction = () => {
+  const sectionRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ['start end', 'end start'],
+  });
+
+  const translateY = useTransform(scrollYProgress, [0, 1], [150, -150]);
+
   return (
-    <section className='bg-gradient-to-b from-white to-[#D2DCFF] py-24 overflow-x-clip'>
+    <section
+      ref={sectionRef}
+      className='bg-gradient-to-b from-white to-[#D2DCFF] py-24 overflow-x-clip'
+    >
       <Container>
         <div className='section-heading-wrapper relative'>
           <h2 className='section-title'>Sign up for free today</h2>
@@ -16,18 +30,20 @@ const CallToAction = () => {
           </p>
 
           {/* UI graphics */}
-          <Image
+          <motion.img
             src={'/images/ui/star.png'}
             alt={'star'}
             height={350}
             width={350}
+            style={{ translateY: translateY }}
             className='hidden md:block absolute -left-[350px] -top-[140px]'
           />
-          <Image
+          <motion.img
             src={'/images/ui/spring.png'}
             alt={'star'}
             height={350}
             width={350}
+            style={{ translateY: translateY }}
             className='hidden md:block absolute -right-[330px] -top-[10px]'
           />
         </div>
