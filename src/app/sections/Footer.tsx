@@ -9,7 +9,7 @@ const Footer = () => {
   return (
     <footer className='bg-black text-[#BCBCBC] text-sm py-10 text-center'>
       <Container>
-        <div className='inline-flex relative before:content-[""] before:h-full before:w-full before:bg-[linear-gradient(to_right,#F87BFF,#FB92CF,#FFDD9B,#C2F0B1,#2FD8FE)] before:absolute before:blur'>
+        <div className='inline-flex relative before:content-[""] before:h-full before:w-full before:bg-[linear-gradient(to_right,#F87BFF,#FB92CF,#FFDD9B,#C2F0B1,#2FD8FE)] before:absolute before:blur-md before:animate-slowSpin'>
           <Image
             src={'/images/logo/logo.png'}
             alt={'Sass logo'}
