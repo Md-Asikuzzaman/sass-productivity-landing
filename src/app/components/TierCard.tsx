@@ -1,7 +1,7 @@
 import clsx from 'clsx';
 import { NextPage } from 'next';
-import Image from 'next/image';
 import { IoMdCheckmark } from 'react-icons/io';
+import { motion } from 'framer-motion';
 
 interface Props {
   tier: {
@@ -35,9 +35,20 @@ const TierCard: NextPage<Props> = ({
             className='inline-flex text-sm px-4 py-1.5
         rounded-xl border border-white/20'
           >
-            <span className='bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2FE,#3BFFFF,#DD7DDF)] text-transparent bg-clip-text font-medium'>
+            <motion.span
+              className='bg-[linear-gradient(to_right,#DD7DDF,#E1CD86,#BBCB92,#71C2FE,#3BFFFF,#DD7DDF,#DD7DDF,#E1CD86,#BBCB92,#71C2FE,#3BFFFF,#DD7DDF)] [background-size:200%] text-transparent bg-clip-text font-medium'
+              animate={{
+                backgroundPositionX: '-100%',
+              }}
+              transition={{
+                repeat: Infinity,
+                duration: 1,
+                ease: 'linear',
+                repeatType: 'loop',
+              }}
+            >
               Popular
-            </span>
+            </motion.span>
           </div>
         )}
       </div>

@@ -10,7 +10,7 @@ import Slider from './Slider';
 const LogoTicker = () => {
   return (
     <section className='py-8 md:py-12 bg-white'>
-      <Container className='flex flex-col gap-8'>
+      <Container className='flex flex-col gap-5 md:gap-8'>
         <div className='flex items-center overflow-hidden [mask-image:linear-gradient(to_right,transparent,black,transparent)]'>
           <Slider
             images={logoTickers}

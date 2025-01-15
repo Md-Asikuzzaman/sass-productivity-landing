@@ -20,7 +20,7 @@ const Slider: NextPage<Props> = ({ images, initial, animate }) => {
       initial={initial}
       animate={animate}
       transition={{
-        duration: 10,
+        duration: 20,
         repeat: Infinity,
         ease: 'linear',
       }}
