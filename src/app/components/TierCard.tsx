@@ -2,6 +2,7 @@ import clsx from 'clsx';
 import { NextPage } from 'next';
 import { IoMdCheckmark } from 'react-icons/io';
 import { motion } from 'framer-motion';
+import Button from './Button';
 
 interface Props {
   tier: {
@@ -65,14 +66,16 @@ const TierCard: NextPage<Props> = ({
           /month
         </span>
       </div>
-      <button
-        className={clsx(
-          'btn btn-solid w-full mt-[30px]',
-          inverse && 'bg-white text-black'
-        )}
+
+      <Button
+        type='btn-solid'
+        fullWidth
+        inverse={inverse && 'bg-white text-black'}
+        className='mt-5'
       >
         {buttonText}
-      </button>
+      </Button>
+
       <ul className='flex flex-col gap-5 mt-8'>
         {features.map((feature, i) => (
           <li key={i} className='flex items-center text-sm gap-4'>

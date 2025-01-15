@@ -4,6 +4,7 @@ import React, { useRef } from 'react';
 import Container from '../components/Container';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 import { motion, useScroll, useTransform } from 'framer-motion';
+import Button from '../components/Button';
 
 const Hero = () => {
   const sectionRef = useRef(null);
@@ -31,11 +32,10 @@ const Hero = () => {
             your progress, motivate your efforts, and celebrate your successes.
           </p>
           <div className='flex gap-1 items-center mt-8'>
-            <button className='btn btn-solid'>Get for free</button>
-            <button className='btn btn-outlined gap-1'>
-              <span>Learn more</span>
-              <IoIosArrowRoundForward size={22} />
-            </button>
+            <Button type='btn-solid'>Get for free</Button>
+            <Button type='btn-outlined' Icon={IoIosArrowRoundForward}>
+              Learn More
+            </Button>
           </div>
         </div>
 

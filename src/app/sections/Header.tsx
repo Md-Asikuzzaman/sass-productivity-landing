@@ -5,6 +5,7 @@ import React from 'react';
 import Banner from '../components/Banner';
 import Container from '../components/Container';
 import Link from 'next/link';
+import Button from '../components/Button';
 
 const Header = () => {
   return (
@@ -58,7 +59,7 @@ const Header = () => {
             >
               Help
             </Link>
-            <button className='btn btn-solid'>Get for free</button>
+            <Button type='btn-solid'>Get for free</Button>
           </nav>
         </Container>
       </div>
