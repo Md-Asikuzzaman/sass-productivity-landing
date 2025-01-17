@@ -51,12 +51,9 @@ const Testimonials = () => {
               duration: 6,
               ease: 'linear',
             }}
-            className='flex flex-col gap-5 mb-5'
+            className='flex-col gap-5 mb-5 hidden md:flex'
           >
-            <TestimonialColumn
-              columnData={secondColumn}
-              className='hidden md:flex'
-            />
+            <TestimonialColumn columnData={secondColumn} />
           </motion.div>
 
           <motion.div
@@ -69,12 +66,9 @@ const Testimonials = () => {
               duration: 7,
               ease: 'linear',
             }}
-            className='flex flex-col gap-5 mb-6'
+            className='flex-col gap-5 mb-6 hidden xl:flex'
           >
-            <TestimonialColumn
-              columnData={thirdColumn}
-              className='hidden xl:flex'
-            />
+            <TestimonialColumn columnData={thirdColumn} />
           </motion.div>
         </div>
       </Container>

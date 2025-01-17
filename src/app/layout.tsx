@@ -9,8 +9,11 @@ const dmSans = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: 'Sass Landing Page',
-  description: 'Template Created by someone',
+  title: 'Sass Productivity Landing Page',
+  description: 'Template Created by Dev Asik.',
+  icons: {
+    icon: '/images/logo/logo.png',
+  },
 };
 
 export default function RootLayout({
