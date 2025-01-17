@@ -3,6 +3,7 @@
 import Container from '../components/Container';
 import { testimonials } from '@/utils/data';
 import TestimonialColumn from '../components/TestimonialColumn';
+import { motion } from 'framer-motion';
 
 const Testimonials = () => {
   const firstColumn = testimonials.slice(0, 3);
@@ -24,16 +25,57 @@ const Testimonials = () => {
         </div>
 
         {/* testimonial wrapper */}
-        <div className='flex justify-center gap-6'>
-          <TestimonialColumn columnData={firstColumn} />
-          <TestimonialColumn
-            columnData={secondColumn}
-            className='hidden md:flex'
-          />
-          <TestimonialColumn
-            columnData={thirdColumn}
-            className='hidden xl:flex'
-          />
+        <div className='flex justify-center gap-6 mt-10 max-h-[750px] overflows-hidden [mask-image:linear-gradient(to_bottom,transparent,black_25%,black_75%,transparent)]'>
+          <motion.div
+            animate={{
+              translateY: '-100%',
+            }}
+            transition={{
+              repeat: Infinity,
+              repeatType: 'mirror',
+              duration: 5,
+              ease: 'linear',
+            }}
+            className='flex flex-col gap-5 mb-5 '
+          >
+            <TestimonialColumn columnData={firstColumn} />
+          </motion.div>
+
+          <motion.div
+            animate={{
+              translateY: '-100%',
+            }}
+            transition={{
+              repeat: Infinity,
+              repeatType: 'mirror',
+              duration: 6,
+              ease: 'linear',
+            }}
+            className='flex flex-col gap-5 mb-5'
+          >
+            <TestimonialColumn
+              columnData={secondColumn}
+              className='hidden md:flex'
+            />
+          </motion.div>
+
+          <motion.div
+            animate={{
+              translateY: '-100%',
+            }}
+            transition={{
+              repeat: Infinity,
+              repeatType: 'mirror',
+              duration: 7,
+              ease: 'linear',
+            }}
+            className='flex flex-col gap-5 mb-6'
+          >
+            <TestimonialColumn
+              columnData={thirdColumn}
+              className='hidden xl:flex'
+            />
+          </motion.div>
         </div>
       </Container>
     </section>

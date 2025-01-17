@@ -20,15 +20,15 @@
   }
 
   .btn {
-    @apply py-2 px-4 rounded-full font-medium tracking-tight inline-flex items-center justify-center;
+    @apply py-2 px-4 rounded-full font-medium tracking-tight inline-flex items-center justify-center border border-transparent transition-all;
   }
 
   .btn-solid {
-    @apply bg-black text-white;
+    @apply bg-black text-white hover:bg-black/70;
   }
 
   .btn-outlined {
-    @apply text-black bg-transparent;
+    @apply text-black bg-transparent hover:border-black;
   }
 
   .tag {
