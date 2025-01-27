@@ -33,7 +33,7 @@ const Testimonials = () => {
             transition={{
               repeat: Infinity,
               repeatType: 'mirror',
-              duration: 5,
+              duration: 9,
               ease: 'linear',
             }}
             className='flex flex-col gap-5 mb-5 '
@@ -48,7 +48,7 @@ const Testimonials = () => {
             transition={{
               repeat: Infinity,
               repeatType: 'mirror',
-              duration: 6,
+              duration: 10,
               ease: 'linear',
             }}
             className='flex-col gap-5 mb-5 hidden md:flex'
@@ -63,7 +63,7 @@ const Testimonials = () => {
             transition={{
               repeat: Infinity,
               repeatType: 'mirror',
-              duration: 7,
+              duration: 11,
               ease: 'linear',
             }}
             className='flex-col gap-5 mb-6 hidden xl:flex'
