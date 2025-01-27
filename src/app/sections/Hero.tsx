@@ -5,6 +5,7 @@ import Container from '../components/Container';
 import { IoIosArrowRoundForward } from 'react-icons/io';
 import { motion, useScroll, useTransform } from 'framer-motion';
 import Button from '../components/Button';
+import Image from 'next/image';
 
 const Hero = () => {
   const sectionRef = useRef(null);
@@ -41,14 +42,7 @@ const Hero = () => {
 
         {/* UI graphics */}
         <div className='mt-20 md:mt-0 md:h-[648px] md:flex-1 relative'>
-          <motion.img
-            src={'/images/ui/cog.png'}
-            alt={'cogs'}
-            // width={0} // for nextjs image component...
-            // height={0}
-            // sizes='(max-width: 768px) 100vw, (max-width: 1024px) 67vw, 580px'
-            // style={{ width: 'auto', height: 'auto' }}
-            className='md:absolute md:h-full md:max-w-none md:-left-6 lg:left-[100px]'
+          <motion.div
             animate={{
               translateY: [-30, 30],
             }}
@@ -58,7 +52,18 @@ const Hero = () => {
               duration: 3.5,
               ease: 'easeInOut',
             }}
-          />
+          >
+            <Image
+              src={'/images/ui/cog.png'}
+              alt={'cogs'}
+              width={0} // for nextjs image component...
+              height={0}
+              sizes='(max-width: 768px) 100vw, (max-width: 1024px) 67vw, 580px'
+              style={{ width: 'auto', height: 'auto' }}
+              className='md:absolute md:h-full md:max-w-none md:-left-6 lg:left-[100px]'
+              priority
+            />
+          </motion.div>
           <motion.img
             src={'/images/ui/cylinder.png'}
             alt={'cylinder'}
